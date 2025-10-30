@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Reforzamiento Educativo en Ofimática</title>
+    <title>Sistema Web de Reforzamiento Educativo en Ofimática</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -111,12 +111,121 @@
             border-radius: 0 8px 8px 0;
         }
         
-        .glosario-term {
+        .research-section {
             background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .chart-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .architecture-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .architecture-img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+        
+        .diagram-container {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .component-box {
+            background: #e3f2fd;
+            border: 2px solid #64b5f6;
             border-radius: 8px;
             padding: 15px;
+            margin: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .component-arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #64b5f6;
+            margin: 10px 0;
+        }
+        
+        .class-diagram {
+            font-family: 'Courier New', monospace;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .class-name {
+            font-weight: bold;
+            color: #2c3e50;
             margin-bottom: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            font-size: 1.1em;
+        }
+        
+        .class-attribute {
+            color: #27ae60;
+            margin-left: 20px;
+            font-size: 0.9em;
+        }
+        
+        .class-method {
+            color: #e74c3c;
+            margin-left: 20px;
+            font-size: 0.9em;
+        }
+        
+        .activity-diagram {
+            background: #fff3e0;
+            border: 1px solid #ffb74d;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .activity-node {
+            background: #ff9800;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
+            font-weight: bold;
+        }
+        
+        .activity-decision {
+            background: #ff5722;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 5px;
+            transform: rotate(45deg);
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
         }
     </style>
 </head>
@@ -137,10 +246,16 @@
                         <a class="nav-link active" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#research">Investigación</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#modules">Módulos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#methodology">Metodología</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">Arquitectura</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#progress">Progreso</a>
@@ -163,8 +278,8 @@
                 <div class="col-lg-8 mx-auto">
                     <h1 class="display-4 fw-bold mb-4">Sistema Web de Reforzamiento Educativo en Ofimática</h1>
                     <p class="lead mb-4">Desarrollado para fortalecer las competencias digitales de maestros del Municipio de Agua Blanca, Jutiapa</p>
-                    <a href="#modules" class="btn btn-primary btn-lg me-2">Comenzar Ahora</a>
-                    <a href="#methodology" class="btn btn-outline-light btn-lg">Ver Metodología</a>
+                    <a href="#research" class="btn btn-primary btn-lg me-2">Conocer Investigación</a>
+                    <a href="#modules" class="btn btn-outline-light btn-lg">Explorar Módulos</a>
                 </div>
             </div>
         </div>
@@ -183,19 +298,143 @@
                     <p>Módulos de Aprendizaje</p>
                 </div>
                 <div class="col-md-3 col-6 mb-4">
-                    <div class="stat-number">73%</div>
+                    <div class="stat-number">73.8%</div>
                     <p>Interés en Capacitación</p>
                 </div>
                 <div class="col-md-3 col-6 mb-4">
-                    <div class="stat-number">100%</div>
-                    <p>Acceso Gratuito</p>
+                    <div class="stat-number">52.4%</div>
+                    <p>Conocimientos Limitados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Investigación Diagnóstica</h2>
+                <p class="lead">Resultados de la encuesta aplicada a maestros de Agua Blanca, Jutiapa</p>
+            </div>
+            
+            <div class="research-section">
+                <h3 class="mb-4">Contexto del Problema</h3>
+                <p>Según el diagnóstico realizado, el <strong>52.4%</strong> de los docentes del Municipio de Agua Blanca, Jutiapa, reportó tener conocimientos limitados sobre ofimática, mientras que el <strong>73.8%</strong> manifestó interés en mejorar sus habilidades en esta área.</p>
+                <p>Esta situación afecta directamente la calidad educativa y la eficiencia en la gestión administrativa de los centros educativos de la región.</p>
+                
+                <h4 class="mt-4 mb-3">Resultados de la Encuesta</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="chart-container">
+                            <h5>Conocimiento de Ofimática</h5>
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <div class="bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                                        <span class="text-white fw-bold">47.6%</span>
+                                    </div>
+                                    <p class="text-center mt-2">Sí conocen</p>
+                                </div>
+                                <div>
+                                    <div class="bg-danger rounded-circle d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                                        <span class="text-white fw-bold">52.4%</span>
+                                    </div>
+                                    <p class="text-center mt-2">No conocen</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="chart-container">
+                            <h5>Interés en Capacitarse</h5>
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                                        <span class="text-white fw-bold">73.8%</span>
+                                    </div>
+                                    <p class="text-center mt-2">Sí están interesados</p>
+                                </div>
+                                <div>
+                                    <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                                        <span class="text-white fw-bold">26.2%</span>
+                                    </div>
+                                    <p class="text-center mt-2">No están interesados</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-4">
+                        <div class="chart-container text-center">
+                            <h5>Uso de Herramientas Ofimáticas</h5>
+                            <div class="mb-3">
+                                <span class="fw-bold text-primary">54.8%</span>
+                                <p>Las usan frecuentemente</p>
+                            </div>
+                            <div>
+                                <span class="fw-bold text-secondary">45.2%</span>
+                                <p>Uso poco habitual</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="chart-container text-center">
+                            <h5>Importancia Percibida</h5>
+                            <div class="mb-3">
+                                <span class="fw-bold text-primary">73.8%</span>
+                                <p>Consideran importantes</p>
+                            </div>
+                            <div>
+                                <span class="fw-bold text-secondary">26.2%</span>
+                                <p>No las consideran importantes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="chart-container text-center">
+                            <h5>Beneficio del Sistema</h5>
+                            <div class="mb-3">
+                                <span class="fw-bold text-primary">71.4%</span>
+                                <p>Consideran que sería beneficioso</p>
+                            </div>
+                            <div>
+                                <span class="fw-bold text-secondary">28.6%</span>
+                                <p>No lo consideran beneficioso</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4 class="mt-4 mb-3">Objetivos de la Investigación</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Objetivo General</h5>
+                                <p class="card-text">Diseñar e implementar un sistema web de reforzamiento educativo en ofimática dirigido a docentes del municipio de Agua Blanca, Jutiapa, que será evaluado mediante indicadores de usabilidad y satisfacción del usuario.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Objetivos Específicos</h5>
+                                <ul class="mb-0">
+                                    <li>Diagnosticar el nivel de conocimiento actual y las necesidades específicas de capacitación</li>
+                                    <li>Desarrollar un sistema web interactivo con al menos tres módulos de aprendizaje</li>
+                                    <li>Implementar el sistema web y capacitar a un grupo piloto de al menos 15 docentes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Modules Section -->
-    <section id="modules" class="py-5 bg-light">
+    <section id="modules" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Módulos de Ofimática</h2>
@@ -304,7 +543,7 @@
     </section>
 
     <!-- Methodology Section -->
-    <section id="methodology" class="py-5">
+    <section id="methodology" class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Metodología de Desarrollo</h2>
@@ -363,6 +602,220 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Arquitectura del Sistema</h2>
+                <p class="lead">Estructura técnica y componentes del sistema web</p>
+            </div>
+            
+            <div class="architecture-section">
+                <h3 class="mb-4">Diagrama de Componentes</h3>
+                
+                <div class="diagram-container">
+                    <h5 class="text-center mb-4">Arquitectura del Sistema - Diagrama de Componentes</h5>
+                    
+                    <!-- Navegador del Usuario -->
+                    <div class="component-box">
+                        <i class="fas fa-desktop fa-2x mb-2"></i><br>
+                        Navegador Web<br>
+                        <small>(Frontend - HTML5, CSS3, JavaScript)</small>
+                    </div>
+                    
+                    <div class="component-arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    
+                    <!-- Servidor Web -->
+                    <div class="component-box">
+                        <i class="fas fa-server fa-2x mb-2"></i><br>
+                        Servidor Web<br>
+                        <small>(Apache/Nginx)</small>
+                    </div>
+                    
+                    <div class="component-arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    
+                    <!-- Aplicación -->
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="component-box">
+                                <i class="fas fa-users fa-2x mb-2"></i><br>
+                                Módulo de Usuarios<br>
+                                <small>Autenticación y perfiles</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="component-box">
+                                <i class="fas fa-book fa-2x mb-2"></i><br>
+                                Módulo de Contenidos<br>
+                                <small>Lecciones y materiales</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="component-box">
+                                <i class="fas fa-chart-bar fa-2x mb-2"></i><br>
+                                Módulo de Progreso<br>
+                                <small>Seguimiento y evaluaciones</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="component-arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    
+                    <!-- Base de Datos -->
+                    <div class="component-box">
+                        <i class="fas fa-database fa-2x mb-2"></i><br>
+                        Base de Datos MySQL<br>
+                        <small>Almacenamiento persistente</small>
+                    </div>
+                </div>
+                
+                <p>El sistema sigue una arquitectura cliente-servidor con componentes modulares que garantizan escalabilidad y mantenibilidad.</p>
+                
+                <h4 class="mt-4 mb-3">Diagrama de Clases</h4>
+                
+                <div class="diagram-container">
+                    <h5 class="text-center mb-4">Modelo Principal de Aprendizaje</h5>
+                    
+                    <div class="class-diagram">
+                        <div class="class-name">Usuario</div>
+                        <div class="class-attribute">- id: int</div>
+                        <div class="class-attribute">- nombre: string</div>
+                        <div class="class-attribute">- email: string</div>
+                        <div class="class-attribute">- tipo: string</div>
+                        <div class="class-method">+ autenticar()</div>
+                        <div class="class-method">+ obtenerProgreso()</div>
+                    </div>
+                    
+                    <div class="text-center my-3">
+                        <i class="fas fa-arrow-down text-primary"></i>
+                        <small class="d-block">herencia</small>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="class-diagram">
+                                <div class="class-name">Docente</div>
+                                <div class="class-attribute">- especialidad: string</div>
+                                <div class="class-attribute">- escuela: string</div>
+                                <div class="class-method">+ gestionarContenido()</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="class-diagram">
+                                <div class="class-name">Administrador</div>
+                                <div class="class-attribute">- permisos: array</div>
+                                <div class="class-method">+ gestionarUsuarios()</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center my-3">
+                        <i class="fas fa-arrows-alt-h text-primary"></i>
+                        <small class="d-block">relación 1..*</small>
+                    </div>
+                    
+                    <div class="class-diagram">
+                        <div class="class-name">Modulo</div>
+                        <div class="class-attribute">- id: int</div>
+                        <div class="class-attribute">- titulo: string</div>
+                        <div class="class-attribute">- descripcion: string</div>
+                        <div class="class-attribute">- duracion: int</div>
+                        <div class="class-method">+ obtenerLecciones()</div>
+                        <div class="class-method">+ calcularProgreso()</div>
+                    </div>
+                    
+                    <div class="text-center my-3">
+                        <i class="fas fa-arrow-down text-primary"></i>
+                        <small class="d-block">composición</small>
+                    </div>
+                    
+                    <div class="class-diagram">
+                        <div class="class-name">Leccion</div>
+                        <div class="class-attribute">- id: int</div>
+                        <div class="class-attribute">- titulo: string</div>
+                        <div class="class-attribute">- contenido: text</div>
+                        <div class="class-attribute">- tipo: string</div>
+                        <div class="class-method">+ mostrarContenido()</div>
+                        <div class="class-method">+ evaluar()</div>
+                    </div>
+                </div>
+                
+                <h4 class="mt-4 mb-3">Diagrama de Actividades - Completar Módulo</h4>
+                
+                <div class="activity-diagram">
+                    <div class="text-center">
+                        <div class="activity-node">Iniciar Módulo</div>
+                        <div class="component-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="activity-node">Revisar Lecciones</div>
+                        <div class="component-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="activity-node">Realizar Ejercicios</div>
+                        <div class="component-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="activity-decision">¿Aprobado?</div>
+                        <div class="component-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="activity-node" style="background: #4caf50;">Sí - Completar</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="activity-node" style="background: #f44336;">No - Reintentar</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4 class="mt-4 mb-3">Diagrama de Secuencia - Autenticación</h4>
+                
+                <div class="diagram-container">
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <div class="component-box">
+                                <i class="fas fa-user fa-2x mb-2"></i><br>
+                                Usuario
+                            </div>
+                        </div>
+                        <div class="col-md-1 component-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="component-box">
+                                <i class="fas fa-window-restore fa-2x mb-2"></i><br>
+                                Interfaz Web
+                            </div>
+                        </div>
+                        <div class="col-md-1 component-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="component-box">
+                                <i class="fas fa-database fa-2x mb-2"></i><br>
+                                Servidor
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="class-diagram">
+                            <strong>Flujo de Autenticación:</strong><br>
+                            1. Usuario ingresa credenciales<br>
+                            2. Interfaz envía solicitud al servidor<br>
+                            3. Servidor valida en base de datos<br>
+                            4. Retorna token de autenticación<br>
+                            5. Interfaz redirige al dashboard
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mt-4">El modelo de datos incluye entidades para usuarios, módulos, lecciones, evaluaciones y seguimiento de progreso, garantizando una gestión integral del proceso educativo.</p>
             </div>
         </div>
     </section>
@@ -454,7 +907,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-5">
+    <section class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Testimonios de Maestros</h2>
