@@ -25,6 +25,40 @@
             background-color: var(--primary-color);
         }
         
+        .login-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 0;
+            text-align: right;
+        }
+        
+        .login-header .container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .login-btn {
+            background-color: white;
+            color: var(--secondary-color);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .login-btn:hover {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
         .hero-section {
             background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
@@ -230,6 +264,16 @@
     </style>
 </head>
 <body>
+    <!-- Login Header -->
+    <div class="login-header">
+        <div class="container">
+            <a href="https://fermont146.github.io/login-prueba-docente" class="login-btn">
+                <i class="fas fa-sign-in-alt"></i>
+                Iniciar Sesión
+            </a>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
@@ -262,9 +306,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Acerca de</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-light ms-2" href="login.html">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>
